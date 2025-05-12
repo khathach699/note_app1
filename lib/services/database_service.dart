@@ -24,7 +24,9 @@ class DatabaseService {
         await db.execute('''
           CREATE TABLE notes (
             id TEXT PRIMARY KEY,
-            content TEXT
+            content TEXT,
+            isSynced INTEGER,
+            updatedAt TEXT
           )
         ''');
       },
@@ -43,6 +45,16 @@ class DatabaseService {
   Future<List<Note>> getNotes() async {
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query('notes');
+    return List.generate(maps.length, (i) => Note.fromMap(maps[i]));
+  }
+
+  Future<List<Note>> getUnsyncedNotes() async {
+    final db = await database;
+    final List<Map<String, dynamic>> maps = await db.query(
+      'notes',
+      where: 'isSynced = ?',
+      whereArgs: [0],
+    );
     return List.generate(maps.length, (i) => Note.fromMap(maps[i]));
   }
 

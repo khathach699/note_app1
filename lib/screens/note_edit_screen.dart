@@ -38,17 +38,17 @@ class NoteEditScreen extends StatelessWidget {
             ),
             SizedBox(height: 16.h),
             ElevatedButton(
-              onPressed: () async {
-                if (textController.text.isNotEmpty) {
-                  if (note == null) {
-                    await noteController.addNote(textController.text);
-                  } else {
-                    await noteController.updateNote(
-                      note!.id,
-                      textController.text,
-                    );
-                  }
+              onPressed: () {
+                final content = textController.text;
+                if (content.isNotEmpty) {
+                  // First navigate back
                   Get.back();
+                  // Then save the note
+                  if (note == null) {
+                    noteController.addNote(content);
+                  } else {
+                    noteController.updateNote(note!.id, content);
+                  }
                 }
               },
               child: Text(loc.save, style: TextStyle(fontSize: 16.sp)),
