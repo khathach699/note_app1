@@ -1,0 +1,46 @@
+{
+  "appTitle": "Note App",
+  "@appTitle": {
+    "description": "The title of the note application"
+  },
+  "addNote": "Add Note",
+  "@addNote": {
+    "description": "Label for adding a new note"
+  },
+  "editNote": "Edit Note",
+  "@editNote": {
+    "description": "Label for editing an existing note"
+  },
+  "noteHint": "Enter your note",
+  "@noteHint": {
+    "description": "Hint text for the note input field"
+  },
+  "save": "Save",
+  "@save": {
+    "description": "Label for the save button"
+  },
+  "delete": "Delete",
+  "@delete": {
+    "description": "Label for the delete button"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "Label for the language selection menu"
+  },
+  "english": "English",
+  "@english": {
+    "description": "Label for the English language option"
+  },
+  "vietnamese": "Vietnamese",
+  "@vietnamese": {
+    "description": "Label for the Vietnamese language option"
+  },
+  "japanese": "Japanese",
+  "@japanese": {
+    "description": "Label for the Japanese language option"
+  },
+  "noNotes": "No notes available",
+  "@noNotes": {
+    "description": "Message displayed when there are no notes"
+  }
+}

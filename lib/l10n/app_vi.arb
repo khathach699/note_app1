@@ -1,0 +1,46 @@
+{
+  "appTitle": "Ứng dụng Ghi chú",
+  "@appTitle": {
+    "description": "Tiêu đề của ứng dụng ghi chú"
+  },
+  "addNote": "Thêm Ghi chú",
+  "@addNote": {
+    "description": "Nhãn cho việc thêm ghi chú mới"
+  },
+  "editNote": "Sửa Ghi chú",
+  "@editNote": {
+    "description": "Nhãn cho việc chỉnh sửa ghi chú hiện có"
+  },
+  "noteHint": "Nhập ghi chú của bạn",
+  "@noteHint": {
+    "description": "Văn bản gợi ý cho trường nhập ghi chú"
+  },
+  "save": "Lưu",
+  "@save": {
+    "description": "Nhãn cho nút lưu"
+  },
+  "delete": "Xóa",
+  "@delete": {
+    "description": "Nhãn cho nút xóa"
+  },
+  "language": "Ngôn ngữ",
+  "@language": {
+    "description": "Nhãn cho menu chọn ngôn ngữ"
+  },
+  "english": "Tiếng Anh",
+  "@english": {
+    "description": "Nhãn cho tùy chọn ngôn ngữ Tiếng Anh"
+  },
+  "vietnamese": "Tiếng Việt",
+  "@vietnamese": {
+    "description": "Nhãn cho tùy chọn ngôn ngữ Tiếng Việt"
+  },
+  "japanese": "Tiếng Nhật",
+  "@japanese": {
+    "description": "Nhãn cho tùy chọn ngôn ngữ Tiếng Nhật"
+  },
+  "noNotes": "Không có ghi chú nào",
+  "@noNotes": {
+    "description": "Thông báo hiển thị khi không có ghi chú"
+  }
+}

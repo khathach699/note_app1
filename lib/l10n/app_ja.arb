@@ -1,0 +1,46 @@
+{
+  "appTitle": "ノートアプリ",
+  "@appTitle": {
+    "description": "ノートアプリケーションのタイトル"
+  },
+  "addNote": "ノートを追加",
+  "@addNote": {
+    "description": "新しいノートを追加するためのラベル"
+  },
+  "editNote": "ノートを編集",
+  "@editNote": {
+    "description": "既存のノートを編集するためのラベル"
+  },
+  "noteHint": "ノートを入力",
+  "@noteHint": {
+    "description": "ノート入力フィールドのヒントテキスト"
+  },
+  "save": "保存",
+  "@save": {
+    "description": "保存ボタンのラベル"
+  },
+  "delete": "削除",
+  "@delete": {
+    "description": "削除ボタンのラベル"
+  },
+  "language": "言語",
+  "@language": {
+    "description": "言語選択メニューのラベル"
+  },
+  "english": "英語",
+  "@english": {
+    "description": "英語オプションのラベル"
+  },
+  "vietnamese": "ベトナム語",
+  "@vietnamese": {
+    "description": "ベトナム語オプションのラベル"
+  },
+  "japanese": "日本語",
+  "@japanese": {
+    "description": "日本語オプションのラベル"
+  },
+  "noNotes": "ノートがありません",
+  "@noNotes": {
+    "description": "ノートがないときに表示されるメッセージ"
+  }
+}
