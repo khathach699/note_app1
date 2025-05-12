@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:note_app1/controllers/language_controller.dart';
 import 'package:note_app1/controllers/note_controller.dart';
@@ -26,23 +27,26 @@ class NoteScreens extends StatelessWidget {
         children: [
           // Nút chọn ngôn ngữ
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0.w),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
                   onPressed: () => languageController.changeLanguage('en'),
-                  child: Text(loc.english),
+                  child: Text(loc.english, style: TextStyle(fontSize: 14.sp)),
                 ),
-                const SizedBox(width: 8),
+                SizedBox(width: 8.w),
                 ElevatedButton(
                   onPressed: () => languageController.changeLanguage('vi'),
-                  child: Text(loc.vietnamese),
+                  child: Text(
+                    loc.vietnamese,
+                    style: TextStyle(fontSize: 14.sp),
+                  ),
                 ),
-                const SizedBox(width: 8),
+                SizedBox(width: 8.w),
                 ElevatedButton(
                   onPressed: () => languageController.changeLanguage('ja'),
-                  child: Text(loc.japanese),
+                  child: Text(loc.japanese, style: TextStyle(fontSize: 14.sp)),
                 ),
               ],
             ),
@@ -58,7 +62,10 @@ class NoteScreens extends StatelessWidget {
                         itemBuilder: (context, index) {
                           final note = noteController.notes[index];
                           return ListTile(
-                            title: Text(note.content),
+                            title: Text(
+                              note.content,
+                              style: TextStyle(fontSize: 16.sp),
+                            ),
                             onTap: () {
                               Get.to(() => NoteEditScreen(note: note));
                             },

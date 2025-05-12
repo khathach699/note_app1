@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:note_app1/controllers/note_controller.dart';
 import 'package:note_app1/generated/app_localizations.dart';
@@ -17,9 +18,14 @@ class NoteEditScreen extends StatelessWidget {
       textController.text = note!.content;
     }
     return Scaffold(
-      appBar: AppBar(title: Text(note == null ? loc.addNote : loc.editNote)),
+      appBar: AppBar(
+        title: Text(
+          note == null ? loc.addNote : loc.editNote,
+          style: TextStyle(fontSize: 20.sp),
+        ),
+      ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0.w),
         child: Column(
           children: [
             TextField(
@@ -30,7 +36,7 @@ class NoteEditScreen extends StatelessWidget {
               ),
               maxLines: 5,
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
             ElevatedButton(
               onPressed: () async {
                 if (textController.text.isNotEmpty) {
@@ -45,7 +51,7 @@ class NoteEditScreen extends StatelessWidget {
                   Get.back();
                 }
               },
-              child: Text(loc.save),
+              child: Text(loc.save, style: TextStyle(fontSize: 16.sp)),
             ),
           ],
         ),

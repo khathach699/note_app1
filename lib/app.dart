@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:note_app1/controllers/language_controller.dart';
 import 'package:note_app1/generated/app_localizations.dart';
@@ -10,15 +11,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(
-      () => GetMaterialApp(
-        title: "Note App",
-        locale: languageController.locale.value,
-        localizationsDelegates: AppLocalizations.localizationsDelegates,
-        supportedLocales: AppLocalizations.supportedLocales,
-        theme: ThemeData(primaryColor: Colors.blue),
-        home: NoteScreens(),
-      ),
+    return ScreenUtilInit(
+      designSize: const Size(360, 800),
+      minTextAdapt: true, // adapt text size to screen size
+      splitScreenMode: true, // support for split screen mode
+      builder: (context, child) {
+        return Obx(
+          () => GetMaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: "Note App",
+            locale: languageController.locale.value,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
+            theme: ThemeData(primaryColor: Colors.blue),
+            home: NoteScreens(),
+          ),
+        );
+      },
     );
   }
 }
