@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:note_app1/controllers/language_controller.dart';
 import 'package:note_app1/generated/app_localizations.dart';
 import 'package:note_app1/screens/note_Screens.dart';
+import 'package:note_app1/screens/sign_in_screen.dart';
+import 'package:note_app1/screens/sign_up_screen.dart';
 
 class MyApp extends StatelessWidget {
   final LanguageController languageController = Get.put(LanguageController());
@@ -24,7 +26,12 @@ class MyApp extends StatelessWidget {
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
             theme: ThemeData(primaryColor: Colors.blue),
-            home: NoteScreens(),
+            initialRoute: "/sign-in",
+            getPages: [
+              GetPage(name: '/home', page: () => NoteScreens()),
+              GetPage(name: '/sign-in', page: () => SignInScreen()),
+              GetPage(name: '/sign-up', page: () => SignUpScreen()),
+            ],
           ),
         );
       },

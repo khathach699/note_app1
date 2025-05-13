@@ -24,6 +24,7 @@ dependencies:
   connectivity_plus: ^6.1.4
   firebase_messaging: ^15.2.5
   flutter_local_notifications: ^19.2.0
+  firebase_auth: ^5.5.3
 
 dev_dependencies:
   flutter_test:
@@ -35,6 +36,7 @@ flutter:
   uses-material-design: true
   generate: true
 
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/
+    - assets/icons/
   #   - images/a_dot_ham.jpeg
